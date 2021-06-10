@@ -1,0 +1,18 @@
+[package]
+name = "kerlab-derive"
+version = "0.1.0"
+authors = ["Airbus CERT <cert@airbus.com>"]
+description = "Use to manage ASN 1 Sequence Generation"
+readme = "README.md"
+keywords = ["kerberos", "security", "network", "windows"]
+categories = ["network"]
+license = "MIT"
+
+[dependencies]
+proc-macro2 = "1.0.8"
+syn = "1.0.14"
+quote = "1.0.2"
+
+[lib]
+name = "kerlab_derive"
+proc-macro = true

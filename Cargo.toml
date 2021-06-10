@@ -1,0 +1,64 @@
+[package]
+name = "kerlab"
+version = "0.1.0"
+authors = ["Sylvain Peyrefitte <citronneur@gmail.com>"]
+description = "Kerberos Lab for Fun and Detection"
+repository = "https://github.com/citronneur/kerlab"
+readme = "README.md"
+keywords = ["kerberos", "security", "network", "windows"]
+categories = ["network"]
+license = "MIT"
+documentation = "https://docs.rs/kerlab"
+
+[lib]
+name = "kerlab"
+path = "src/lib.rs"
+
+[[bin]]
+name = "kerasktgt"
+path = "src/bin/kerasktgt.rs"
+required-features = ["kerasktgt"]
+
+[[bin]]
+name = "kerasktgs"
+path = "src/bin/kerasktgs.rs"
+required-features = ["kerasktgs"]
+
+[[bin]]
+name = "kerforce"
+path = "src/bin/kerforce.rs"
+required-features = ["kerforce"]
+
+[[bin]]
+name = "kerspray"
+path = "src/bin/kerspray.rs"
+required-features = ["kerspray"]
+
+[[bin]]
+name = "kerticket"
+path = "src/bin/kerticket.rs"
+required-features = ["kerticket"]
+
+[features]
+kerasktgt = ["clap", "hex"]
+kerasktgs = ["clap", "hex"]
+kerforce = ["clap"]
+kerspray = ["clap"]
+kerticket = ["clap", "hex"]
+
+[dependencies]
+yasna = { version = "^0.3", features = ["chrono", "bit-vec"] }
+indexmap = "^1.3"
+ascii = "1.0.0"
+kerlab-derive = { path = "derive" }
+bit-vec = "0.6.3"
+chrono = "0.4.19"
+md4 = "^0.8"
+byteorder = "^1.3"
+rand = "^0.7"
+md-5 = "^0.8"
+hmac = "^0.7"
+base64 = "0.13.0"
+
+clap = { version = "^2.33", optional = true}
+hex = { version = "^0.3", optional = true}
