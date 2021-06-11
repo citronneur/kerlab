@@ -11,6 +11,7 @@ These rules was presented during the [Toulouse Hacking Conference 2021](https://
 
 Use to ask the first Ticket in kerberos protocol. If the username is not set, the TGT request is made without pre authentication.
 It will write the ticket into KRB_CRED format, compatible with rubeus or mimikatz.
+We can choose between the cleartext password, or the ntlm hash version.
 
 ```
 kerasktgt 0.1.0
@@ -118,6 +119,7 @@ OPTIONS:
 ## kerticket Kerberos Ticket Viewer
 
 Print informations of ticket saved on disk. Use to convert a ticket into hashcat compatible format.
+We can decrytp the `EncTicketPartBody` using the hash or the password of the service (including krbtgt).
 
 ```
 kerticket 0.1.0
