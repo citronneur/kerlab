@@ -1,5 +1,5 @@
 # Kerlab
-A Rust version of Kekeo for playing with kerberos
+A Rust implementation of Kerberos for FUn and Detection
 
 Kerlab was developped just to drill down *kerberos* protocol and better understand it.
 The main pupose is to write more targeted detection rules. 
@@ -117,7 +117,7 @@ OPTIONS:
 
 ## kerticket Kerberos Ticket Viewer
 
-Print information of ticket saved on disk. Use to convert a ticket into hashcat compatible format.
+Print informations of ticket saved on disk. Use to convert a ticket into hashcat compatible format.
 
 ```
 kerticket 0.1.0
